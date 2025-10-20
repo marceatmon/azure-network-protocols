@@ -20,8 +20,6 @@ This tutorial outlines creating Domain Admins and Users in Active Directory.<br 
 <h2>Configuration</h2>
 
 - Create an Admin and Normal User Account in AD
-- Join Client-1 to your domain
-- Setup Remote Desktop for non-administrative users on Client-1
 - Create additional users and attempt to login Client-1 with one of the users
 
 <h2>Configuration Steps</h2>
@@ -46,7 +44,6 @@ Once the user has been created, the account must be added as an Admin to that fo
 <img src="https://github.com/marceatmon/AD-files/blob/main/Setting%20Client-1's%20DNS%20settings%20to%20DC-1's%20Private%20IP%20address.jpg?raw=true" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Once the group box is populated, type "domains" in enter the object names to be selected box-->Click on Check Names to the right-->Select Domain Admins-->Click Ok-->Click on Apply-->Click Ok. This will add your user as a domain admin to your active directory. Log out of the server and log back into the server as the admin.
-Once the group box is populated, type "domains" enter the object names to be selected box-->Click on Check Names to the right-->Select Domain Admins-->Click Ok-->Click on Apply-->Click Ok. This will add your user as a domain admin to your active directory. Log out of the server and log back into the server as the admin.
+Add DC-1's private IP as Client-1's DNS server. On Client-1, go to Networking, Network Settings, Network Interface Name, then DNS Servers. Change from "Inherit from virtual network" to "Custom" and save. Restart Client-1.
 </p>
 <br />
